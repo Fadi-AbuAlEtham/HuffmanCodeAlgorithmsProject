@@ -1,0 +1,278 @@
+/* Background with an image */
+.root {
+    -fx-background-image: url("background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Button styles */
+.button {
+    -fx-background-color: #FFF5E1;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 2px;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-text-fill: #60746C; /* Dark olive green for button text */
+    -fx-font-size: 18px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-padding: 8 25;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.3, 0, 2);
+    -fx-cursor: hand;
+    -fx-transition: -fx-scale-x 0.2s ease-in-out, -fx-scale-y 0.2s ease-in-out;
+}
+
+.button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.3, 0, 4);
+}
+
+.button:pressed {
+    -fx-background-color: #E7D9B4;
+}
+
+/* Dimmed style for coins that cannot be selected */
+.coin-dimmed {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+/* Label styles for scene titles */
+.label {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFC300; /* Bright amber color for label text */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0.5, 0, 2); /* Stronger shadow for a glowing effect */
+}
+
+/* Label styles for scene titles */
+.custom-label {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF; /* Bright amber color for label text */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0.5, 0, 2); /* Stronger shadow for a glowing effect */
+}
+
+/* Text styles for smaller labels in text fields and UI components */
+.text {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-fill: #60746C; /* Dark olive green */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 2, 0.3, 0, 1);
+}
+
+
+.custom-text {
+    -fx-font-family: "Merienda";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-fill: #FFFFFF; /* Default to white, but can be changed */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 2, 0.3, 0, 1);
+}
+
+/* TextField styling for a game-like look */
+.text-field {
+    -fx-background-color: #FFF5E1;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 2px;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-padding: 6 15;
+    -fx-font-family: "Arial";
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #60746C;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0.3, 0, 1);
+}
+
+.text-field:focused {
+    -fx-border-color: #D4AF37;
+}
+
+/* ScrollPane styling with transparent background */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* VBox styling to remove white background */
+.vbox {
+    -fx-background-color: transparent;
+}
+
+/* ListView styling */
+.list-view {
+    -fx-background-color: #FFF5E1;
+    -fx-border-color: #D4AF37;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+}
+
+/* Highlight selected ListView item */
+.list-view .list-cell:selected {
+    -fx-background-color: #D4AF37;
+    -fx-text-fill: #60746C;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell {
+    -fx-background-color: #FFFDE7;
+    -fx-border-color: #D4AF37;
+    -fx-text-fill: #60746C;
+    -fx-font-size: 18px;
+    -fx-padding: 8 10;
+    -fx-cursor: hand;
+}
+
+/* StackPane styling for coin display */
+.stack-pane {
+    -fx-background-color: #D4AF37;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-color: #B8860B;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.3, 0, 2);
+}
+
+.stack-pane:hover {
+    -fx-background-color: #FFD700;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.4, 0, 4);
+    -fx-cursor: hand;
+}
+
+/* Coin label styling within StackPane */
+.stack-pane .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+/* RadioButton styling with animation */
+.radio-button {
+    -fx-text-fill: #60746C;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 5;
+    -fx-transition: -fx-scale-x 0.2s ease, -fx-scale-y 0.2s ease;
+}
+
+.radio-button .radio {
+    -fx-background-color: transparent;
+    -fx-border-color: #FFC300;
+    -fx-border-radius: 50%;
+    -fx-border-width: 2px;
+    -fx-transition: -fx-background-color 0.2s ease, -fx-scale-x 0.2s ease, -fx-scale-y 0.2s ease;
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: #FFC300;
+    -fx-border-color: #FFF5E1;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0.4, 0, 2);
+}
+
+.radio-button:hover .radio {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* TextArea styling */
+.text-area {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 1;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-text-fill: #FFFFFF;
+    -fx-wrap-text: true;
+    -fx-padding: 50 10;
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+/* TextArea styling */
+.custom-text-area {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-border-color: rgba(255, 255, 255, 1.0);
+    -fx-border-width: 1;
+    -fx-font-family: "Merienda";
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-text-fill: black;
+    -fx-wrap-text: true;
+    -fx-padding: 50 10;
+}
+
+/* Base styling for TableView */
+.table-view {
+    -fx-background-color: #2b2b3b; /* Dark gray background */
+    -fx-control-inner-background: #2b2b3b; /* Inner table background */
+    -fx-border-color: #444444; /* Border color for table */
+    -fx-border-width: 2px;
+    -fx-padding: 10px;
+}
+
+/* Header styling for TableView */
+.table-view .column-header {
+    -fx-background-color: #3b3b4b; /* Slightly lighter than the main table for contrast */
+    -fx-text-fill: #ffffff; /* White text */
+    -fx-font-size: 18px; /* Enlarged font size for headers */
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER; /* Center-align header text */
+    -fx-border-color: #555555; /* Border between headers */
+    -fx-border-width: 1px; /* Thin border for cells */
+}
+
+/* Cell styling with borders */
+.table-view .table-row-cell {
+    -fx-background-color: transparent; /* No background by default */
+    -fx-text-fill: #eaeaea; /* Light text color for readability */
+    -fx-font-size: 16px; /* Enlarged font size for rows */
+    -fx-alignment: CENTER; /* Center-align row data */
+    -fx-border-color: #444444; /* Border color for cells */
+    -fx-border-width: 1px; /* Cell border width */
+}
+
+/* Row hover effect */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #444455; /* Subtle highlight on hover */
+    -fx-text-fill: #ffffff; /* White text on hover */
+}
+
+/* Selected row styling */
+.table-view .table-row-cell:focused, .table-view .table-row-cell:selected {
+    -fx-background-color: #575767; /* Highlight for selected rows */
+    -fx-text-fill: #ffffff; /* White text for selection */
+}
+
+/* Scrollbar styling */
+.scroll-bar {
+    -fx-background-color: #2b2b3b; /* Match the table background */
+    -fx-border-color: #444444; /* Subtle scrollbar border */
+}
+.scroll-bar .thumb {
+    -fx-background-color: #555566; /* Thumb color */
+    -fx-background-insets: 2px; /* Inner padding for the thumb */
+    -fx-background-radius: 5px; /* Rounded corners for the thumb */
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: #666677; /* Lighter thumb on hover */
+}
